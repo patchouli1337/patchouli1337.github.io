@@ -1,0 +1,85 @@
+---
+layout: default
+title: Список книг
+footer: true
+---
+<div class="row">
+  <div class="col-md-12">
+    <div class="page-header text-center">
+      <h1>Список книг</h1>
+    </div>
+    <h2 class="text-center">
+      Художественная литература<br />
+      <small>Список был составлен из <a href="http://www.theguardian.com/world/2002/may/08/books.booksnews">этого</a> и <a href="http://www.bbc.co.uk/arts/bigread/top100.shtml">этого</a> путем небольшой <a href="books.sh">скриптовой</a> <a href="generatehtml.sh">магии</a>.</small>
+    </h2>
+    <table class="table table-striped table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Номер</th>
+          <th>Автор</th>
+          <th>Название на русском</th>
+          <th>Название на английском</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% include fictionbooks.html %}
+      </tbody>
+      <div class="pull-right"><a href="booklist.csv">Скачать список в CSV</a></div>
+    </table>
+    
+    
+    <h2 class="text-center">Наука</h2>
+    <div class="text-center">
+      <span class="label label-default">Химия</span>
+      <span class="label label-success">Биология</span>
+      <span class="label label-primary">Математика</span>
+      <span class="label label-info">История</span>
+      <span class="label label-warning">Физика/Астрономия</span>
+      <span class="label label-danger">Психиатрия</span>
+    </div>
+    <table class="table table-striped table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Автор</th>
+          <th>Название на русском</th>
+          <th>Название на английском</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% include sciencebooks.html %}
+      </tbody>
+    </table>
+    <h2 class="text-center">Философия</h2>
+    <table class="table table-striped table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Автор</th>
+          <th>Название на русском</th>
+          <th>Название на английском</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% include philosophybooks.html %}
+      </tbody>
+    </table>
+    <h3 class="text-center">Религия</h3>
+    <table class="table table-striped table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Название на русском</th>
+          <th>Название на английском</th>
+          <th>Автор</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% include religionbooks.html %}
+      </tbody>
+    </table>
+</div>
+<footer class="text-muted text-center">
+  <hr />
+  <p>См. также <a href="/movies">список фильмов</a>.</p>
+  <p><a href="http://dobrochan.com/rf/res/506738.xhtml">Тред на Доброчане</a></p>
+</footer>
+
+
